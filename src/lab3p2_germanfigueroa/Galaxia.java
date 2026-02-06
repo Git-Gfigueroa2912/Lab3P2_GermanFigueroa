@@ -14,12 +14,15 @@ public class Galaxia {
     private int minimo_planetas;
     private int maximo_planetas;
     private String planetas;
+    private String galaxia;
+    private ArrayList<Planeta> 
     
     Galaxia(String nombre, int minimo_planetas, int maximo_planetas, String planetas){
         this.nombre = nombre;
         this.minimo_planetas = minimo_planetas;
         this.maximo_planetas = maximo_planetas;
         this.planetas = planetas;
+        this.galaxia = galaxia;
     }
     public String nombre(){
         return nombre;
@@ -50,6 +53,6 @@ public class Galaxia {
         return listaPlaneta;
     }
     public void setlistaPlaneta(){
-        
+        this.listaPlaneta = listaPlaneta;
     }
 }

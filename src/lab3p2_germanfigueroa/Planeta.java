@@ -13,9 +13,9 @@ public class Planeta {
     private int masa;
     private int velocidad;
     private int gravedad;
-    private String tipo;
+    private TipoPlaneta tipo;
     
-    Planeta(String nombre, int masa, int velocidad, int gravedad, String tipo){
+    Planeta(String nombre, int masa, int velocidad, int gravedad, TipoPlaneta tipo){
         this.nombre = nombre;
         this.masa = masa;
         this.velocidad = velocidad;

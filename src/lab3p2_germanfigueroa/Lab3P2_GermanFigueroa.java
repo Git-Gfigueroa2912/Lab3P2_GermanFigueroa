@@ -42,7 +42,13 @@ public class Lab3P2_GermanFigueroa {
                     break;
                     
                 case 5:
-                    poder();
+                    
+                    
+                case 6:    
+                    verEstadisticas();
+                    
+                case 7:
+                    
                     
                 case 0:
                     System.out.println("Saliendo del programa");
@@ -146,10 +152,20 @@ public class Lab3P2_GermanFigueroa {
     public static void verEstadisticas(){
         int posicion = 0;
         do{
-            System.out.println("Ingrese el planeta que desea ver");
+            System.out.println("Ingrese el planeta que desea ver: ");
+            
+            try{
+                posicion = entrada.nextInt();
+                
+            }catch(Exception e){
+                
+            }
         }while(false);
     }
     public static void listarPlaneta(){
+        
+    }
+    public static void agregarPlaneta(){
         
     }
     public static void eliminarPlaneta(){
@@ -162,6 +178,33 @@ public class Lab3P2_GermanFigueroa {
             }catch(Exception e){
                 
             }
+        }while(false);
+    }
+    public static void colision (){
+        int posicion = 0;
+        do{
+           listarPlaneta();
+            System.out.println("Ingrese el planeta que desea modificar: ");
+            
+            try{
+                
+            }catch(Exception e){
+                posicion = entrada.nextInt();
+            }
+        }while(false);
+        
+        int posicion2 = 0;
+        do{
+            listarPlaneta();
+            System.out.println("Ingrese el planeta que desea modificaar: ");
+            
+           try{
+              while(posicion<0 || posicion2==posicion || posicion2>=Galaxia.get(posGalaxia).getlistaPlaneta().size()){
+                  System.out.println("El planeta no se encuentra en la lista");
+              }
+           }catch(Exception e){
+               
+           }
         }while(false);
     }
 }    
