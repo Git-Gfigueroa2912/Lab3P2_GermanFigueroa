@@ -24,15 +24,25 @@ public class Lab3P2_GermanFigueroa {
             entrada.nextLine();
             
             switch(opcion){
-                
-                case 1:
-                    System.out.println("Planet Clash"); 
-                    menu(opcion);
                     
+                case 1:
+                    crearGalaxia();
                     break;
                     
                 case 2:
-                    crearGalaxia();
+                    administrarGalaxia();
+                    break;
+                    
+                case 3:
+                    listarGalaxia();
+                    break;
+                    
+                case 4:
+                    rankingGalaxia();
+                    break;
+                    
+                case 5:
+                    poder();
                     
                 case 0:
                     System.out.println("Saliendo del programa");
@@ -54,7 +64,7 @@ public class Lab3P2_GermanFigueroa {
         resp = entrada.nextInt();
         
         if(resp == 2){
-            System.out.println("SUBMENU");
+            System.out.println("==========SUBMENU============");
             System.out.println("1. Agregar Planeta");
             System.out.println("2. Editar Planeta");
             System.out.println("3. Eliminar Planeta");
@@ -62,24 +72,96 @@ public class Lab3P2_GermanFigueroa {
             System.out.println("5. Estadistica de Planeta");
             System.out.println("6. Colision de Planeta");
             
-            try{
-                resp = entrada.nextInt();
-            }catch(Exception e){
-                System.out.println("Intente de nuevo, la opcion no existe");
-            }
+            
+            
         }
         return resp;
     }
     public static void crearGalaxia(){
-        System.out.println("Ingrese el nombre del planeta: ");
+        System.out.println("Ingrese el nombre de la galaxia: ");
         String nombre = entrada.nextLine();
+        do{
+           try{
+               System.out.println("Esta vacio, ingrese otro nombre");
+           }catch(Exception e){
+               System.out.println("Error al crear galaxia");
+               System.out.println(e);
+           }
+        }while(false);
+        
+        int minimo = 0;
+        do{
+            System.out.println("Ingrese el minimo del planeta: ");
+            
+            try{
+               minimo = entrada.nextInt();
+               if(minimo < 1){
+                   System.out.println("El minimo no puede ser menor a 1, ingrese otro numero");
+                   minimo = entrada.nextInt();
+               }
+            }catch(Exception e){
+                System.out.println("El numero es invalido");
+            }
+        }while(false);
+        
+        int maximo = 0;
+        do{
+            System.out.println("Ingrese el maximo del planeta: ");
+            
+            try{
+               if(minimo>0){
+                   System.out.println("");
+               }
+            }catch(Exception e){
+                System.out.println("El numero es invalido");
+                System.out.println(e);
+            }
+        }while(false);
+    }
+    public static void administrarGalaxia(){
+        int posicion = 0;
         do{
            try{
                
            }catch(Exception e){
-               System.out.println("Error al crear galaxia");
+               
            }
         }while(false);
     }
-
+    public static void listarGalaxia(){
+        for(int i = 0; galaxia.size(); i++){
+            System.out.println(i+"");
+        }
+    }
+    public static void rankingGalaxia(){
+        
+    }
+    public static double poder(Planeta planeta){
+        int masa = planeta.getMasa();
+        int velocidad = planeta.getVelocidad();
+        int gravedad = planeta.getGravedad();
+        double poder = masa*(velocidad*2)*(0.5*gravedad)*(0.5*gravedad);
+        return poder;
+    }
+    public static void verEstadisticas(){
+        int posicion = 0;
+        do{
+            System.out.println("Ingrese el planeta que desea ver");
+        }while(false);
+    }
+    public static void listarPlaneta(){
+        
+    }
+    public static void eliminarPlaneta(){
+        int posicion = entrada.nextInt();
+        do{
+            System.out.println("Ingrese el planeta que desea eliminar: ");
+            
+            try{
+                
+            }catch(Exception e){
+                
+            }
+        }while(false);
+    }
 }    

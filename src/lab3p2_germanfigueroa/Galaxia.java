@@ -4,6 +4,7 @@
  */
 package lab3p2_germanfigueroa;
 
+import java.util.ArrayList;
 /**
  *
  * @author gafm2
@@ -19,5 +20,36 @@ public class Galaxia {
         this.minimo_planetas = minimo_planetas;
         this.maximo_planetas = maximo_planetas;
         this.planetas = planetas;
+    }
+    public String nombre(){
+        return nombre;
+    }
+    public String setNombre(){
+        return this.nombre;
+    }
+    public int getMinimo_planetas(){
+        return minimo_planetas;
+    }
+    public int setMinimi_planetas(){
+        return this.minimo_planetas;
+    }
+    public int getMaximo_planetas(){
+        return maximo_planetas;
+    }
+    public String getPlanetas(){
+        return planetas;
+    }
+    public String setPlanetas(){
+        return this.planetas;
+    }
+    @Override
+    public String toString(){
+        return "Nombre : " + nombre + ", su minimo es: " + minimo_planetas + ", su maximo es: " + maximo_planetas;
+    }
+    public ArrayList<Planeta> getlistaPlaneta(){
+        return listaPlaneta;
+    }
+    public void setlistaPlaneta(){
+        
     }
 }

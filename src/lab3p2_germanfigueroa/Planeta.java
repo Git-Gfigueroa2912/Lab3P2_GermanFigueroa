@@ -22,4 +22,38 @@ public class Planeta {
         this.gravedad = gravedad;
         this.tipo = tipo;
     }
+    public String getNombre(){
+        return nombre;
+    }
+    public String setNombre(){
+        return this.nombre;
+    }
+    public int getMasa(){
+        return masa;
+    }
+    public int setMasa(){
+        return this.masa;
+    }
+    public int getVelocidad(){
+        return velocidad;
+    }
+    public int setVelocidad(){
+        return this.velocidad;
+    }
+    public int getGravedad(){
+        return gravedad;
+    }
+    public int setGravedad(){
+        return this.gravedad;
+    }
+    public String getTipo(){
+        return tipo;
+    }
+    public String setTipo(){
+        return this.tipo;
+    }
+    @Override
+    public String toString(){
+        return "Nombre: " + nombre + ", su masa es: " + masa + ", su velocidad es: " + velocidad + ", su gravedad es: " + gravedad + "y el tipo es :" + tipo;
+    }
 }
